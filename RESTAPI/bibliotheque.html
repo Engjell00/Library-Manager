@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <title>Ma bibliothèque</title>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+      <script src="js/scripts.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="js/toastr-master/toastr.js"></script>
+      <link href="js/toastr-master/toastr.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1>bibliothèque</h1>
+    </header>
+    <nav>
+        <button type="button" name="button" id="voirLivres">Voir tous les livres</button>
+    </nav>
+    <section>
+      <form id="maForm">
+            <table>
+              <thead>
+                <tr>
+                      <th>Titre</th>
+                      <th>Auteur</th>
+                      <th>Annee</th>
+                      <th>ISBN</th>
+                      <th>Editeur</th>
+                      <th>Evaluation</th>
+                  </tr>
+                </thead>
+              <tbody>
+                <tr>
+                  <td><input name=titre  id="titre"></td>
+                  <td><input name=auteur id="auteur"></td>
+                  <td><input name=annee  id="annee"></td>
+                  <td><input name=isbn   id="isbn"></td>
+                  <td><input name=editeur id="editeur"></td>
+                  <td><input type="number" name=evaluation id="evaluation" min="0" max="10"></td>
+                    <input type="hidden" name="id" id="livreID">
+                  </tr>
+                </tbody>
+            </table>
+            <input TYPE="submit" id="submit" VALUE="Ajouter un livre">
+            <input TYPE="submit" id="modifier" VALUE="modifier un livre">
+      </form>
+    </section>
+        <aside>
+            <div id="resultat"></div>
+        </aside>
+    <section>
+        <div id="test"></div>
+    </section>
+  </body>
+</html>
